@@ -1,272 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optitex 21 | Instalación Profesional - Ayuda Servicios TI</title>
-    
-    <!-- Fuentes: Poppins para un look moderno -->
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
-    
-    <!-- FontAwesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    
-    <!-- AOS para animaciones al bajar (Scroll) -->
-    <link href="https://unpkg.com" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optitex 21 | Instalación Profesional</title>
 
-    <style>
-        :root {
-            --bg-dark: #0a0f1d; /* Fondo azul casi negro de la imagen */
-            --accent: #3b82f6;  /* Azul brillante */
-            --purple: #a855f7;  /* Morado para degradados */
-            --text-gray: #94a3b8;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-        /* Navbar estilo Glassmorphism */
-        .navbar {
-            background: rgba(10, 15, 29, 0.8);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding: 1.2rem 0;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-        /* Hero Section - Estilo Exacto a la Imagen */
-        .hero {
-            padding: 140px 0 100px;
-            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
-        }
+.gradient-text {
+    background: linear-gradient(90deg, #60a5fa, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .tagline {
-            color: var(--accent);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-        }
+.hero-bg {
+    background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+}
 
-        .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            line-height: 1.1;
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, var(--accent), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-desc {
-            color: var(--text-gray);
-            max-width: 550px;
-            font-size: 1.1rem;
-        }
-
-        /* Botones estilo la imagen */
-        .btn-primary-custom {
-            background-color: var(--accent);
-            color: white;
-            padding: 12px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            transition: 0.3s;
-        }
-
-        .btn-primary-custom:hover {
-            background-color: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-            color: white;
-        }
-
-        .btn-outline-custom {
-            background-color: rgba(255,255,255,0.05);
-            color: white;
-            padding: 12px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s;
-        }
-
-        .btn-outline-custom:hover {
-            background-color: rgba(255,255,255,0.15);
-            color: white;
-        }
-
-        /* Contenedor de Imagen con Efecto 3D */
-        .img-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-        }
-
-        /* Sección de Precio */
-        .price-badge {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--accent);
-            padding: 20px;
-            border-radius: 15px;
-            display: inline-block;
-        }
-
-        /* WhatsApp Flotante */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: white;
-        }
-
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding: 50px 0;
-            margin-top: 100px;
-            background: #070b14;
-        }
-    </style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+    color: white;
+}
+</style>
 </head>
-<body>
+
+<body class="bg-[#0f172a] text-gray-200">
+
+<!-- WhatsApp -->
+<a href="https://wa.me/573001234567?text=Hola,%20quiero%20información%20sobre%20Optitex%2021" 
+   class="whatsapp-float" target="_blank">
+   <i class="fab fa-whatsapp"></i>
+   <span class="text-sm font-bold">Chatea conmigo</span>
+</a>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">AYUDA <span class="gradient-text">SERVICIOS TI</span></a>
-        <div class="ms-auto d-none d-md-block">
-            <span class="text-white-50 small"><i class="fas fa-map-marker-alt me-2"></i>Medellín, Colombia</span>
+<nav class="fixed w-full z-50 glass-effect py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold gradient-text">AYUDA TI</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+            <a href="#beneficios" class="hover:text-blue-400 transition">Beneficios</a>
+            <a href="#precio" class="hover:text-blue-400 transition">Precio</a>
+            <a href="#contacto" class="text-yellow-400 hover:text-yellow-300 transition">Contacto</a>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <!-- Columna Texto -->
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="tagline mb-3 d-block">Ingeniería de Software Senior</span>
-                <h1 class="hero-title mb-4">
-                    Instalación de <br>
-                    <span class="gradient-text">Optitex 21 Full</span>
-                </h1>
-                <p class="hero-desc mb-5">
-                    Potencia tu producción textil con la versión más estable. Instalación garantizada, configuración de red y soporte técnico especializado. Más de 8 años de experiencia en soluciones TI.
+<!-- HERO -->
+<header class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Texto -->
+        <div>
+            <h2 class="text-blue-400 font-semibold mb-2 uppercase tracking-widest">
+                Ingeniería de Software Senior
+            </h2>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Instalación de 
+                <span class="gradient-text">Optitex 21 Full</span>
+            </h1>
+
+            <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+                Instalación profesional, configuración en red, optimización del sistema y soporte técnico especializado. 
+                Más de 8 años de experiencia en soluciones TI industriales.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-center transition">
+                    Iniciar Proyecto
+                </a>
+                <a href="#beneficios" class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-center transition">
+                    Ver Detalles
+                </a>
+            </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="relative hidden md:block">
+            <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                 alt="Instalación de Software"
+                 class="rounded-2xl shadow-2xl relative z-10 border border-white/10">
+        </div>
+
+    </div>
+</header>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="py-24 bg-[#0a0f1d]">
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-16">
+            <h3 class="text-blue-400 font-bold mb-2 uppercase">¿Qué Incluye?</h3>
+            <h2 class="text-4xl font-bold">Servicio Completo de Instalación</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="glass-effect p-8 rounded-2xl hover:border-blue-500/50 transition group">
+                <div class="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
+                    <i class="fas fa-check text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-4">Instalación 100% Funcional</h4>
+                <p class="text-gray-400">
+                    Versión Full operativa con todos los módulos activos y listos para producción.
                 </p>
-
-                <!-- Precio Destacado -->
-                <div class="price-badge mb-5">
-                    <span class="d-block small text-white-50 mb-1">Inversión única</span>
-                    <h2 class="fw-bold mb-0 text-white">$900.000 <small class="fs-6 fw-light">COP</small></h2>
-                </div>
-
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="https://wa.me" class="btn btn-primary-custom">
-                        Iniciar Proyecto
-                    </a>
-                    <a href="#detalles" class="btn btn-outline-custom">
-                        Ver Soluciones
-                    </a>
-                </div>
             </div>
 
-            <!-- Columna Imagen (Estilo visual de la IA) -->
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="img-container">
-                    <!-- Aquí podrías poner un screenshot de Optitex o una imagen abstracta como la que enviaste -->
-                    <img src="https://images.unsplash.com" alt="Soporte Técnico" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to top, var(--bg-dark), transparent);"></div>
+            <div class="glass-effect p-8 rounded-2xl hover:border-purple-500/50 transition group">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition">
+                    <i class="fas fa-network-wired text-2xl"></i>
                 </div>
+                <h4 class="text-xl font-bold mb-4">Configuración en Red</h4>
+                <p class="text-gray-400">
+                    Instalación multiusuario en red local para equipos de diseño y producción.
+                </p>
             </div>
+
+            <div class="glass-effect p-8 rounded-2xl hover:border-blue-400/50 transition group">
+                <div class="w-14 h-14 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-400 group-hover:text-white transition">
+                    <i class="fas fa-headset text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-4">Soporte Post-Instalación</h4>
+                <p class="text-gray-400">
+                    Asistencia técnica garantizada y acompañamiento inicial incluido.
+                </p>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- Sección de Detalles Rápidos -->
-<section id="detalles" class="py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <i class="fas fa-check-circle fs-3 mb-3 text-primary"></i>
-                    <h5>100% Funcional</h5>
-                    <p class="text-white-50 small">Versión completa con todos los módulos activos y listos para trabajar.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <i class="fas fa-rocket fs-3 mb-3 text-purple" style="color: #a855f7;"></i>
-                    <h5>Optimización</h5>
-                    <p class="text-white-50 small">Configuramos el software según las capacidades de tu hardware para mayor velocidad.</p>
-                </div>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <i class="fas fa-headset fs-3 mb-3 text-info"></i>
-                    <h5>Soporte Premium</h5>
-                    <p class="text-white-50 small">Garantía de instalación y asistencia técnica post-venta incluida.</p>
-                </div>
-            </div>
+<!-- PRECIO -->
+<section id="precio" class="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-center border-y border-white/10">
+    <div class="container mx-auto px-6">
+        <div class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase">
+            Inversión Única
         </div>
+
+        <h2 class="text-5xl font-bold text-white mb-4">
+            $900.000 COP
+        </h2>
+
+        <p class="text-blue-100 text-lg opacity-80 mb-8">
+            Instalación completa, configuración y soporte incluido.
+        </p>
+
+        <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-500/20">
+            Solicitar Instalación
+        </a>
     </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p class="text-white-50 mb-0 small">© 2026 Ayuda Servicios TI - Especialistas en Arquitecturas Escalables y Software Industrial.</p>
-        <p class="small mt-2" style="color: var(--accent);">Medellín, Colombia</p>
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 bg-[#0a0f1d]">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+        <h2 class="text-4xl font-bold mb-4">¿Listo para comenzar?</h2>
+        <p class="text-gray-400 mb-12">
+            Escríbeme y coordinamos tu instalación profesional de inmediato.
+        </p>
+
+        <a href="https://wa.me/573001234567?text=Hola,%20quiero%20instalar%20Optitex%2021"
+           class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg transition shadow-lg shadow-blue-500/20">
+           Contactar por WhatsApp
+        </a>
     </div>
+</section>
+
+<footer class="py-12 border-t border-gray-800 text-center text-sm text-gray-500">
+    © 2026 Ayuda Servicios TI | Medellín, Colombia
 </footer>
-
-<!-- Botón WhatsApp -->
-<a href="https://wa.me" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net"></script>
-<script src="https://unpkg.com"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-</script>
 
 </body>
 </html>
