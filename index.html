@@ -39,7 +39,6 @@ body {
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
-    text-align: center;
     font-size: 20px;
     box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
     z-index: 100;
@@ -71,7 +70,7 @@ body {
     <div class="container mx-auto px-6 flex justify-between items-center">
         <div class="text-2xl font-bold gradient-text">AYUDA TI</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
-            <a href="#beneficios" class="hover:text-blue-400 transition">Beneficios</a>
+            <a href="#servicio" class="hover:text-blue-400 transition">Servicio</a>
             <a href="#precio" class="hover:text-blue-400 transition">Precio</a>
             <a href="#contacto" class="text-yellow-400 hover:text-yellow-300 transition">Contacto</a>
         </div>
@@ -89,21 +88,18 @@ body {
             </h2>
 
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Instalación de 
+                Instalación Profesional de
                 <span class="gradient-text">Optitex 21 Full</span>
             </h1>
 
             <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
-                Instalación profesional, configuración en red, optimización del sistema y soporte técnico especializado. 
-                Más de 8 años de experiencia en soluciones TI industriales.
+                Implementación optimizada y lista para producción.
+                Especialista en soluciones tecnológicas para el sector textil industrial.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-center transition">
-                    Iniciar Proyecto
-                </a>
-                <a href="#beneficios" class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-center transition">
-                    Ver Detalles
+            <div>
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-500/20">
+                    Solicitar Instalación
                 </a>
             </div>
         </div>
@@ -119,48 +115,45 @@ body {
     </div>
 </header>
 
-<!-- BENEFICIOS -->
-<section id="beneficios" class="py-24 bg-[#0a0f1d]">
+<!-- SERVICIO PRINCIPAL -->
+<section id="servicio" class="py-24 bg-[#0a0f1d]">
     <div class="container mx-auto px-6">
 
         <div class="text-center mb-16">
-            <h3 class="text-blue-400 font-bold mb-2 uppercase">¿Qué Incluye?</h3>
-            <h2 class="text-4xl font-bold">Servicio Completo de Instalación</h2>
+            <h3 class="text-blue-400 font-bold mb-2 uppercase">Servicio Principal</h3>
+            <h2 class="text-4xl font-bold">Instalación 100% Funcional</h2>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                Versión Full completamente operativa, optimizada y lista para producción.
+                Configuración profesional para máximo rendimiento.
+            </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="flex justify-center">
+            <div class="glass-effect p-10 rounded-2xl hover:border-blue-500/50 transition max-w-xl text-center">
 
-            <div class="glass-effect p-8 rounded-2xl hover:border-blue-500/50 transition group">
-                <div class="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
-                    <i class="fas fa-check text-2xl"></i>
+                <div class="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center mx-auto mb-6 text-blue-400">
+                    <i class="fas fa-check text-3xl"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-4">Instalación 100% Funcional</h4>
-                <p class="text-gray-400">
-                    Versión Full operativa con todos los módulos activos y listos para producción.
-                </p>
-            </div>
 
-            <div class="glass-effect p-8 rounded-2xl hover:border-purple-500/50 transition group">
-                <div class="w-14 h-14 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition">
-                    <i class="fas fa-network-wired text-2xl"></i>
-                </div>
-                <h4 class="text-xl font-bold mb-4">Configuración en Red</h4>
-                <p class="text-gray-400">
-                    Instalación multiusuario en red local para equipos de diseño y producción.
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Instalación optimizada, activación completa del sistema y configuración lista para trabajar desde el primer día.
                 </p>
-            </div>
 
-            <div class="glass-effect p-8 rounded-2xl hover:border-blue-400/50 transition group">
-                <div class="w-14 h-14 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-400 group-hover:text-white transition">
-                    <i class="fas fa-headset text-2xl"></i>
-                </div>
-                <h4 class="text-xl font-bold mb-4">Soporte Post-Instalación</h4>
-                <p class="text-gray-400">
-                    Asistencia técnica garantizada y acompañamiento inicial incluido.
-                </p>
             </div>
-
         </div>
+
+        <!-- Otros servicios -->
+        <div class="mt-20 text-center">
+            <h3 class="text-xl font-semibold text-gray-300 mb-4">
+                Otros Servicios TI
+            </h3>
+
+            <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                Desarrollo web profesional, automatización de procesos, soluciones tecnológicas personalizadas,
+                soporte técnico empresarial e implementación de software especializado.
+            </p>
+        </div>
+
     </div>
 </section>
 
@@ -176,7 +169,7 @@ body {
         </h2>
 
         <p class="text-blue-100 text-lg opacity-80 mb-8">
-            Instalación completa, configuración y soporte incluido.
+            Instalación completa y configuración profesional incluida.
         </p>
 
         <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-500/20">
